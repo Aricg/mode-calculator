@@ -1,0 +1,14 @@
+loaders:
+  - type: python
+    search_path: ["."]  # it will search in the current directory
+    modules: ["mode-calculator"]  # name of your python script without .py
+processors:
+  - type: filter
+    docstrings: true
+  - type: python
+    remove_init_docstring: true
+    remove_module_docstring: true
+  - type: render
+    renderer: markdown
+
+
