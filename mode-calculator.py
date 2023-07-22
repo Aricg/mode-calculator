@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 import argparse
 
+
 class ModeCounter:
     def __init__(self):
         self.frequency_dictonary = {}
         self.winning_frequency = 0
 
-    def add_number(self,number):
+    def add_number(self, number):
         if number not in self.frequency_dictonary:
             self.frequency_dictonary[number] = 1
         else:
@@ -23,10 +24,12 @@ class ModeCounter:
     def get(self):
         return self.winner
 
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('numbers', metavar='NUM', type=int, nargs='+', help='numbers to process')
     return parser.parse_args()
+
 
 def mode():
     args = parse_args()
@@ -37,7 +40,6 @@ def mode():
         counter.add_number(number)
     final_winner = counter.get()
     print(f"The mode is {final_winner}")
-
 
 
 if __name__ == "__main__":
