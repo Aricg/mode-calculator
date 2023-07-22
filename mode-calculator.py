@@ -12,6 +12,7 @@ class ModeCounter:
   def __init__(self):
       self.frequency_dictonary = {}
       self.winning_frequency = 0
+      self.modes = []
 
   def add_number(self,number):
     if number not in self.frequency_dictonary:
@@ -24,6 +25,8 @@ class ModeCounter:
       current_freqency = self.frequency_dictonary[number]
       if current_freqency > self.winning_frequency:
           self.winning_frequency = current_freqency
+          print(f"Number {number} is the newest number with the highest with frequency {self.winning_frequency}. It is the new mode.")
+
 
  #def get(self):
 
